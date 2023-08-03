@@ -31,7 +31,7 @@ export default function Home() {
             </p>
             <h4>Important Links</h4>
             <p>Repository: <a href='https://github.com/Vignesh-shenoy-10/Viamagus-test/tree/master'>Github URL</a> </p>
-            <p>Live Link: <a href='https://github.com/Vignesh-shenoy-10/Viamagus-test/tree/master'>Application URL</a> </p>
+            <p>Live Link: <a href='https://viamagustest.netlify.app/'>Application URL</a> </p>
             </div>  
             <p>P.S - I have written a README.MD file which contains some technical documentation</p>
     </div>
