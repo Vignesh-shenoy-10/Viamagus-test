@@ -8,7 +8,7 @@ https://www.awesomescreenshot.com/video/19664365?key=08a47b092a311d07aa20df841c7
 # Live link to the application
 https://viamagustest.netlify.app/
 
-Steps to run the application locally
+# Steps to run the application locally
 1. After cloning the application on your local, please run npm install in order to install all the dependencies required.
 2. once the dependencies are installed, please run npm start in order to start the application on your localhost.
 3. Navigating to localhost:3000 will let you see the application within your local system.
