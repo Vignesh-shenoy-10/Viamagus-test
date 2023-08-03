@@ -8,8 +8,15 @@ import Alert from '@mui/material/Alert'
 import Navbar from "../Components/navbar"
 import Typography from "@mui/material/Typography";
 import { Navigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+import IconButton from "@mui/material/IconButton";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 export default function Createpost() {
+  const navigate = useNavigate()
+  const navigateBack = () => {
+      navigate('/')
+    };
   const [title, setTitle] = useState("")
   const [description, setDescription] = useState("")
   const [submission, setSubmission] = useState()
@@ -50,6 +57,16 @@ export default function Createpost() {
   return (
     <div>
         <Navbar/>
+        <IconButton
+          onClick={navigateBack}
+          variant="solid"
+          size="sm"
+          color="primary"
+          sx={{ ml: "auto", fontWeight: 600, marginTop: 2, width: 300 }}
+        >
+          <ArrowBackIcon />
+          Back to Home
+        </IconButton>
         <Typography variant="h3" gutterBottom style={{marginTop: '15px', fontFamily: 'Roboto Condensed' }}>
         Create a post
       </Typography>

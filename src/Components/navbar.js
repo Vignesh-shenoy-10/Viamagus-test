@@ -31,6 +31,9 @@ function Navbar() {
             Test
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Link className="Nav__createpost" to="/">
+          <MenuItem>Home</MenuItem>
+          </Link>
           <Link className="Nav__createpost" to="/createpost">
           <MenuItem>Create a post</MenuItem>
           </Link>
