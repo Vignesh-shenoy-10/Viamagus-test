@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.posts {
+  padding: 20px 10px;
+  flex: 1;
+}
+
+@for $i from 1 through 10 {
+  .posts > .post:nth-child(#{$i}) {
+    animation-delay: $i * 0.1s;
+  }
+}
+
+.post {
+  opacity: 0;
+  animation: poof 0.5s forwards;
+  background-color: #fff;
+  color: #333;
+  padding: 20px 20px 10px 20px;
+  margin-bottom: 10px;
+  box-shadow: rgb(0 0 0 / 10%) 0px 4px 6px -1px,
+    rgb(0 0 0 / 6%) 0px 2px 4px -1px;
+  &:hover {
+    box-shadow: none;
+  }
+  &-head {
+    margin: 0;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+   
+  }
+  &-body {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.pagination {
+  margin: 15px auto;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  outline: none;
+}
+.pagination > .active > a {
+  background-color: black;
+  border-color: black;
+  color: white;
+}
+.pagination > li > a {
+  border: 1px solid;
+  padding: 5px 10px;
+  outline: none;
+  cursor: pointer;
+}
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  background-color: black;
+  border-color: black;
+  outline: none;
+}
+.pagination > li > a,
+.pagination > li > span {
+  color: black;
+}
+.pagination > li:first-child > a,
+.pagination > li:first-child > span,
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+  border-radius: unset;
+}
+
+.loader {
+  text-align: center;
+  font-size: 24px;
+  animation: poof 0.5s;
+  color: black;
+}
+
+/* Keyframes  */
+
+@keyframes poof {
+  0% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
